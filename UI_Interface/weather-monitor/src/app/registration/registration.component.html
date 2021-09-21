@@ -1,0 +1,15 @@
+
+<h1>REGISTRATION PAGE</h1>
+
+<form #reg="ngForm" (ngSubmit)="regform(reg.value)" >
+
+    <input type="text" ngModel placeholder="Enter Name" name="name" required><br>
+
+    <input type="email" ngModel placeholder="Enter Email" name="email"  required><br>
+
+    <input type="password" ngModel placeholder="Enter password" name="password"  required><br>
+
+
+    <input type="submit" value="Add" >
+
+</form>

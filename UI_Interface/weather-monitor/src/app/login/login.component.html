@@ -1,0 +1,11 @@
+<p>login works!</p>
+<form #log="ngForm" (ngSubmit)="loginform(log.value)">
+
+    <input type="email" ngModel placeholder="Enter Email" name="email"  required><br>
+
+    <input type="password" ngModel placeholder="Enter password" name="password"  required><br>
+
+
+    <input type="submit" value="LOGIN" >
+
+</form>

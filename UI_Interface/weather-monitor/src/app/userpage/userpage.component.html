@@ -1,0 +1,33 @@
+<form #cityadd="ngForm" (ngSubmit)="cityform(cityadd.value)">
+
+    <input type="text" ngModel placeholder="Enter a City name" name="city"  required>
+
+    <button class="btn btn-primary" (click)="weatherdata()" type="submit">ADD CITY</button>
+
+</form>
+
+<br>
+<table class="table table-striped table-light" style="opacity:0.8">
+    <thead>
+    <th>DATE AND TIME</th>
+    <th>CITY NAME</th>
+    <th>CURRENT TEMPERATURE</th>
+    <th>DESCRIPTION</th>
+    <th>FORCAST</th>
+    <th>DELETE </th> 
+    <th>UPDATE </th> 
+
+    </thead>
+    <tbody>
+    <tr *ngFor="let t of weather;">
+    <td>{{t.datetime}}</td>
+    <td>{{t.city}}</td>
+    <td>{{t.temp_now}} °C</td> 
+    <td>{{t.description}}</td>
+    <td><img src="https://openweathermap.org/img/w/{{t.icon}}.png"></td>
+    <td> <button class="btn btn-danger" id=del (click)="deldata(t.city)">DELETE</button></td>   
+    <td> <button class="btn btn-success" id=edit (click)="updatedata(t.city)">UPDATE</button></td>   
+
+    </tr>
+</tbody>
+</table>
