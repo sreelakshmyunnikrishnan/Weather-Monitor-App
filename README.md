@@ -1,1 +1,1 @@
-Frontend is Angular 
+Weather Monitor Application using Angular as FrontEnd, Flask as BackEnd and Database MongoDB.
